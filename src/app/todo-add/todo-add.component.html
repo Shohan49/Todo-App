@@ -1,0 +1,49 @@
+<div class="container pt-4">
+    <div class="card shadow-sm">
+      <div class="card-header bg-primary text-white text-center">
+        <h3>Add New To-Do</h3>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="mb-3">
+            <label for="title" class="form-label">Title <span style="color: brown;">*</span></label>
+            <input
+              type="text"
+              id="title"
+              class="form-control"
+              placeholder="Enter your to-do title"
+              name="title"
+              [(ngModel)]="todoForm.title"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Description <span style="color: brown;">*</span></label>
+            <textarea
+              id="description"
+              class="form-control"
+              rows="3"
+              placeholder="Add a brief description"
+              name="description"
+              [(ngModel)]="todoForm.description"
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="dueDate" class="form-label">Due Date <span style="color: brown;">*</span></label>
+            <input
+              type="date"
+              id="dueDate"
+              class="form-control"
+              name="dueDate"
+              [(ngModel)]="todoForm.dueDate"
+            />
+          </div>
+          <div class="d-grid">
+            <button type="button" class="btn btn-primary" (click)="submit()">
+              Add To-Do
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

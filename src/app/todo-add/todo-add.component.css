@@ -1,0 +1,50 @@
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  label {
+    font-weight: 500;
+  }
+  
+  input,
+  textarea {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+  }
+  
+  input:focus,
+  textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: #007bff;
+  }
+  
+  button {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 15px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+  }
+  

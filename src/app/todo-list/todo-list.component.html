@@ -1,0 +1,37 @@
+<div class="container mt-4">
+    <div class="row" *ngIf="todosList.length !== 0">
+      <div class="col-md-6 mb-4" *ngFor="let todo of todosList">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">
+              {{ todo.title }}
+            </h5>
+            <p class="card-text text-muted">
+              {{todo.description}}
+            </p>
+            <p class="card-text">
+              <small class="text-secondary">Due: {{todo.dueDate}}</small>
+            </p>
+            <div class="d-flex justify-content-between mt-3">
+              <button type="button" class="btn btn-sm btn-warning">
+                <i class="bi bi-pencil"></i> Edit
+              </button>
+              <button type="button" class="btn btn-sm btn-danger">
+                <i class="bi bi-trash"></i> Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-3 pb-4" *ngIf="todosList.length === 0">
+        <div class="alert alert-warning text-center" role="alert">
+            <h4 class="alert-heading">No Data Found</h4>
+            <p>It looks like there are no items to display at the moment.</p>
+            <hr>
+            <p class="mb-0">Please add some items to get started!</p>
+        </div>
+    </div>
+  </div>
+  

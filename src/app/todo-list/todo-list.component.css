@@ -1,0 +1,55 @@
+.container {
+    max-width: 900px;
+  }
+  
+  .card {
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 0.95rem;
+  }
+  
+  .btn {
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+  
+  .btn-warning {
+    color: #fff;
+  }
+  
+  .btn-warning:hover {
+    background-color: #d39e00;
+    border-color: #c69500;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+  }
+
+  .alert {
+    border-radius: 8px; /* Rounded corners for the alert */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the alert */
+  }
+  
+  .alert-heading {
+    font-size: 1.5rem; /* Larger font for the heading */
+  }
+  
+  .alert p {
+    font-size: 1rem; /* Standard font size for paragraphs */
+  }
+  
