@@ -1,5 +1,5 @@
 <div class="bg">
-    <app-todo-add (viewData)="onView($event)"></app-todo-add>
+    <app-todo-add (viewData)="onView($event)" [passData]="selectedTodo"></app-todo-add>
 
-    <app-todo-list [todosList]="todos"></app-todo-list>
+    <app-todo-list [todosList]="todos" (selectedTodo)="getSelectedTask($event)"></app-todo-list>
 </div>

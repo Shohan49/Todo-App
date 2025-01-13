@@ -12,9 +12,17 @@ import { formType } from './form-type';
 })
 export class AppComponent {
   todos: formType[] = [];
+  selectedTodo: any;
 
-  onView(data: any) {
+  onView(data: formType[]) {
     console.log('on parrent after data push', data);
     this.todos = data;
   }
+
+  getSelectedTask(selectedTodo: formType) {
+    this.selectedTodo = selectedTodo;
+    console.log(this.selectedTodo);
+  }
+
+
 }

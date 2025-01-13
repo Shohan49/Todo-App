@@ -13,7 +13,7 @@
               <small class="text-secondary">Due: {{todo.dueDate}}</small>
             </p>
             <div class="d-flex justify-content-between mt-3">
-              <button type="button" class="btn btn-sm btn-warning">Edit</button>
+              <button type="button" class="btn btn-sm btn-warning" (click)="edit(todo)">Edit</button>
               <button type="button" class="btn btn-sm btn-danger" (click)="delete(i)">Delete</button>
             </div>
           </div>

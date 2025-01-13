@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { formType } from '../form-type';
 
@@ -10,14 +10,21 @@ import { formType } from '../form-type';
 })
 export class TodoAddComponent {
   todoForm: formType = {
-    title: '',
-    description: '',
-    dueDate: ''
+    title: 'abc',
+    description: 'bcd',
+    dueDate: '2024-12-12'
   }
   @Output() viewData = new EventEmitter<formType[]>();
+  @Input() passData: any;
 
   totalFormData: formType[] = [];
   // isFormValid: boolean = true;
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['passData'] && changes['passData'].currentValue) {
+      this.populateForm(changes['passData'].currentValue);
+    }
+  }
 
   submit() {
     if((this.todoForm.title !== '' || this.todoForm.description !== '', this.todoForm.dueDate !== '')) {
@@ -28,6 +35,10 @@ export class TodoAddComponent {
       alert('Please fill the form');
     }
     // console.log(this.todoForm);
+  }
+
+  populateForm(data: formType) {
+    this.todoForm = { ...data }; // Populate the form with passed data
   }
 
   rest() {

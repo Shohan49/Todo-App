@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { formType } from '../form-type';
 import { EmptyListComponent } from './empty-list/empty-list.component';
 
@@ -11,10 +11,15 @@ import { EmptyListComponent } from './empty-list/empty-list.component';
 })
 export class TodoListComponent {
   @Input() todosList: formType[] = [];
+  @Output() selectedTodo = new EventEmitter<any>();
 
   delete(indexNumber: number) {
     console.log('Delete the card', indexNumber);
     this.todosList.splice(indexNumber, 1)
+  }
+  edit(todo: any) {
+    console.log(todo);
+    this.selectedTodo.emit(todo);
   }
   
 }
